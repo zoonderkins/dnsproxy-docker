@@ -1,9 +1,9 @@
 ## Docker build
 
 ```shell
-docker build --build-arg TARGETPLATFORM=linux/arm64 -t "ookangzheng/dnsproxy:latest" -f Dockerfile .
-docker buildx build --platform linux/arm64 -t "ookangzheng/dnsproxy:latest" -f Dockerfile .
-docker buildx build --platform linux/amd64 -t "ookangzheng/dnsproxy:latest" -f Dockerfile .
+
+docker buildx build --platform linux/arm64 --build-arg TARGETPLATFORM=linux/arm64 -t "ookangzheng/dnsproxy:arm64" -f Dockerfile .
+docker buildx build --platform linux/amd64 --build-arg TARGETPLATFORM=linux/amd64 -t "ookangzheng/dnsproxy:amd64" -f Dockerfile .
 docker push ookangzheng/dnsproxy:latest
 ```
 
