@@ -2,9 +2,13 @@
 
 ```shell
 
-docker buildx build --platform linux/arm64 --build-arg TARGETPLATFORM=linux/arm64 -t "ookangzheng/dnsproxy:arm64" -f Dockerfile .
-docker buildx build --platform linux/amd64 --build-arg TARGETPLATFORM=linux/amd64 -t "ookangzheng/dnsproxy:amd64" -f Dockerfile .
-docker push ookangzheng/dnsproxy:latest
+docker buildx build --platform linux/arm64 --no-cache=true --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ')  --build-arg TARGETPLATFORM=linux/arm64 -t "ookangzheng/dnsproxy:arm64" -f Dockerfile .
+
+docker buildx build --platform linux/amd64 --no-cache=true --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ')  --build-arg TARGETPLATFORM=linux/amd64 -t "ookangzheng/dnsproxy:amd64" -f Dockerfile .
+
+docker push ookangzheng/dnsproxy:arm64
+
+docker push ookangzheng/dnsproxy:amd64
 ```
 
 ## Using docker compose
