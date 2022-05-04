@@ -32,4 +32,3 @@ docker compose up -d --force-recreate
 
 1. https://github.com/vmstan/dnsproxy/blob/main/Dockerfile
 2. https://github.com/AdguardTeam/dnsproxy
-3. https://github.com/honwen/Dockers/tree/dnsproxy
