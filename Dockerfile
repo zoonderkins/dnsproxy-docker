@@ -1,5 +1,6 @@
 FROM alpine:latest
 LABEL MAINTAINER git-ed <https://github.com/ookangzheng>
+LABEL VERSION 0.0.3
 
 ARG BUILD_DATE
 LABEL org.label-schema.build-date=$BUILD_DATE
