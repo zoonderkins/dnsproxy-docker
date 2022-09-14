@@ -23,7 +23,7 @@ services:
       - "53:53/tcp"
       - "53:53/udp"
     environment:
-      - "ARGS=-u=https://doh-jp.blahdns.com/dns-query -u quic://dot-sg.blahdns.com:784 -f 94.140.14.14 -b 1.1.1.1 --cache --cache-min-ttl=30 --cache-max-ttl=300 --cache-optimistic --edns "
+      - "ARGS=-u=https://doh-jp.blahdns.com/dns-query -u quic://dot-sg.blahdns.com:784 -f 94.140.14.14:53 -f 94.140.14.14:8853 -b 9.9.9.9:9953 -b 9.9.9.9:53 --cache --cache-min-ttl=30 --cache-max-ttl=300 --cache-optimistic --edns "
     image: ookangzheng/dnsproxy
 
 ```
